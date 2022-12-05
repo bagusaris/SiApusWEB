@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/informasipoli', function () {
     return view('siapus.informasipoli');
 })->name('informasipoli');
+
+Route::get('/daftar', function () {
+    return view('siapus.pendaftaranantrean');
+})->name('daftar');
+
+Route::get('/tiket', function () {
+    return view('siapus.antreansaya');
+})->name('tiket');
