@@ -1,7 +1,7 @@
 @extends('siapus.admin_master')
 @section('siapus')
 
-<main id="main">
+      <main id="main">
 
         <!-- ======= Featured Services Section ======= -->
         <section id="featured-services" class="featured-services">
@@ -12,6 +12,9 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+                            <!-- <div class="icon"><img src="./assets/img/poli/1.png" class="card-img" alt=".."><b><a href=""
+                                        style="margin-left: 25px; color: black;">POLI UMUM</a></b></i></div> -->
                                         <div class="icon"><img src="{{asset('siapus/img/poli/UMUM.png') }}" class="card-img" alt=".."><b></b></i></div>
                             <h4 class="title"><a href="">POLI UMUM</a></h4>
                             <p class="description">Poli umum adalah jenis layanan di Puskesmas yang memberikan
@@ -52,7 +55,7 @@
                         <a href="#" class="popup-close">&times;</a>
                     </div>
                     <div class="popup-img">
-                        <img src="{{asset('./siapus/img/poli/UMUM.png') }}" alt="">
+                        <img src="{{asset('siapus/img/poli/UMUM.png') }}" alt="">
                     </div>
                     <div class="popup-text">
                         <p>Poli umum merupakan salah satu dari jenis layanan di Puskesmas yang memberikan pelayanan
@@ -71,7 +74,7 @@
                             <a href="#" class="popup-close">&times;</a>
                         </div>
                         <div class="popup-img">
-                            <img src="{{asset('./siapus/img/poli/KIA.png') }}" alt="">
+                            <img src="{{asset('siapus/img/poli/KIA.png') }}" alt="">
                         </div>
                         <div class="popup-text">
                             <p>Poli KIA adalah jenis layanan di Puskesmas yang memberikan pelayanan ibu hamil, ibu bersalin, imunisasi, pengobatan bayi dan balita, kesehatan reproduksi remaja termasuk calon pengantin, pelayanan pil KB dan implan.
@@ -88,7 +91,7 @@
                             <a href="#" class="popup-close">&times;</a>
                         </div>
                         <div class="popup-img">
-                            <img src="{{asset('./siapus/img/poli/GIGI.png') }}" alt="">
+                            <img src="{{asset('siapus/img/poli/GIGI.png') }}" alt="">
                         </div>
                         <div class="popup-text">
                             <p>Poli Gigi adalah jenis layanan di Puskesmas yang memberikan pelayanan seputar kesehatan mulut dan gigi berupa pemeriksaan kesehatan gigi dan mulut, pengobatan dan pemberian tindakan medis dasar kesehatan gigi dan mulut seperti penambalan gigi, pencabutan gigi dan pembersihan karang gigi.
@@ -142,6 +145,5 @@
             </div>
         </section><!-- End Panduan Pendaftaran Section -->
     </main>
-    <!-- End Main -->
 
 @endsection

@@ -50,7 +50,7 @@
       </section>
       <!-- ======= infoPus Section ======= -->
       <section id="infoPus" class="infoPus">
-        <div class="container mt-5" data-aos="fade-up">
+        <div class="container-fluid mt-5" data-aos="fade-up">
           <div class="section-title">
             <h2>Pencarian Puskesmas</h2>
           </div>

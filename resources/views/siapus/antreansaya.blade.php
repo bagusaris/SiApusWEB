@@ -1,7 +1,7 @@
 @extends('siapus.admin_master')
 @section('siapus')
 
- <main id="main">
+<main id="main">
     <!-- ======= Antrean Saya Section ======= -->
     <section id="antreansaya" class="antreansaya">
       <div class="container mt-5" data-aos="fade-up">
@@ -25,7 +25,7 @@
                         <tr>
                           <td class="textt">NIK</td>
                           <td>:</td>
-                          <td>3620********0007</td>
+                          <td>3620****0007</td>
                         </tr>
                         <tr>
                           <td class="textt">Poli</td>
@@ -58,18 +58,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <div class="row pop-up" style="border-color: transparent;">
-                  <div class="col-md-3 col-sm-1 d-flex align-items-center justify-content-center">
-                    <img class="img-popupku" src="{{asset('siapus/img/pop-upantreansaya/logo_bwi.png') }}" alt="">
-                  </div>
-                  <div class="col-md-6 col-sm-3 d-flex align-items-center justify-content-center">
-                    <h5 class="modal-title" id="title-popup"><strong>PUSKESMAS
-                        BADEAN</strong></h5>
-                  </div>
-                  <div class="col-md-3 col-sm-1 d-flex align-items-center justify-content-center">
-                    <img class="img-popupku" src="{{asset('siapus/img/pop-upantreansaya/logo_pus.png') }}" alt="" >
-                  </div>
+                <div class="row" style="border-color: transparent;">
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td width="25%" valign="middle" align="center"><img class="img-popupku img-fluid" src="{{asset('siapus/img/pop-upantreansaya/logo_bwi.png') }}" alt=""></td>
+                        <td width="50%" valign="middle" align="center"><strong><span class="font-text">PUSKESMAS BADEAN</span></strong></td>
+                        <td width="25%" valign="middle" align="center"><img class="img-popupku img-fluid" src="{{asset('siapus/img/pop-upantreansaya/logo_pus.png') }}" alt="" ></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+                
                 <div class="row d-flex" style="border-color: transparent; margin-top: -50px;">
                   <div class="col-md-6 col-sm-6 d-flex align-items-center justify-content-center">
                     <h5 class="modal-title" id="exampleModalLabel" style="font-size: 16px;"><strong>Kamis,
@@ -120,7 +120,7 @@
                         <tr>
                           <td class="textt">NIK</td>
                           <td>:</td>
-                          <td>3620********2756</td>
+                          <td>3620****2756</td>
                         </tr>
                         <tr>
                           <td class="textt">Poli</td>
@@ -152,7 +152,16 @@
               </div>
               <div class="modal-body">
                 <div class="row pop-up" style="border-color: transparent;">
-                  <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center">
+                 <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td width="25%" valign="middle" align="center"><img class="img-popupku img-fluid" src="{{asset('siapus/img/pop-upantreansaya/logo_bwi.png') }}" alt=""></td>
+                        <td width="50%" valign="middle" align="center"><strong><span class="font-text">PUSKESMAS JAJAG</span></strong></td>
+                        <td width="25%" valign="middle" align="center"><img class="img-popupku img-fluid" src="{{asset('siapus/img/pop-upantreansaya/logo_pus.png') }}" alt="" ></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  {{-- <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center">
                     <img src="assets/img/pop-upantreansaya/logo_bwi.png" alt="" style="height: 80px;">
                   </div>
                   <div class="col-md-6 col-sm-6 d-flex align-items-center justify-content-center">
@@ -161,7 +170,7 @@
                   </div>
                   <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center">
                     <img src="assets/img/pop-upantreansaya/logo_pus.png" alt="" style="height: 80px;">
-                  </div>
+                  </div> --}}
                 </div>
                 <div class="row d-flex" style="border-color: transparent; margin-top: -50px;">
                   <div class="col-md-6 col-sm-6 d-flex align-items-center justify-content-center">
@@ -205,12 +214,12 @@
                         <tr>
                           <td width="25%" valign="top" class="textt">Nama</td>
                           <td width="2%">:</td>
-                          <td style="font-weight:bold">Siti F******</td>
+                          <td style="font-weight:bold">Siti F****</td>
                         </tr>
                         <tr>
                           <td class="textt">NIK</td>
                           <td>:</td>
-                          <td>3620********0563</td>
+                          <td>3620****0563</td>
                         </tr>
                         <tr>
                           <td class="textt">Poli</td>
@@ -242,7 +251,16 @@
               </div>
               <div class="modal-body">
                 <div class="row pop-up" style="border-color: transparent;">
-                  <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center">
+                 <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td width="25%" valign="middle" align="center"><img class="img-popupku img-fluid" src="{{asset('siapus/img/pop-upantreansaya/logo_bwi.png') }}" alt=""></td>
+                        <td width="50%" valign="middle" align="center"><strong><span class="font-text">PUSKESMAS SINGOJURUH</span></strong></td>
+                        <td width="25%" valign="middle" align="center"><img class="img-popupku img-fluid" src="{{asset('siapus/img/pop-upantreansaya/logo_pus.png') }}" alt="" ></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  {{-- <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center">
                     <img src="assets/img/pop-upantreansaya/logo_bwi.png" alt="" style="height: 80px;">
                   </div>
                   <div class="col-md-6 col-sm-6 d-flex align-items-center justify-content-center">
@@ -251,7 +269,7 @@
                   </div>
                   <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center">
                     <img src="assets/img/pop-upantreansaya/logo_pus.png" alt="" style="height: 80px;">
-                  </div>
+                  </div> --}}
                 </div>
                 <div class="row d-flex" style="border-color: transparent; margin-top: -50px;">
                   <div class="col-md-6 col-sm-6 d-flex align-items-center justify-content-center">
@@ -272,7 +290,7 @@
               </div>
               <div class="modal-footer d-flex align-items-center justify-content-center">
                 <div class="col-12 d-flex align-items-center justify-content-center">
-                  <h5 class="modal-title" id="exampleModalLabel"><strong>Nama : Si** F****** </strong></h5>
+                  <h5 class="modal-title" id="exampleModalLabel"><strong>Nama : Si** F**** </strong></h5>
                 </div>
                 <div class="col-12 d-flex align-items-center justify-content-center">
                   <h5 class="modal-title" id="exampleModalLabel"><strong>Poli KIA</strong></h5>
@@ -290,5 +308,6 @@
     <!-- End Antrean Saya Section -->
   </main>
   <!-- End #main -->
+
 
 @endsection
