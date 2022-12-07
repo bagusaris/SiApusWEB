@@ -821,6 +821,13 @@ section {
     background:#65C18C;
   } */
 
+.infoPus .dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #65c18c;
+}
+
 .infoPus .img {
     position: relative;
 }

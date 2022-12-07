@@ -49,7 +49,7 @@
         </div>
       </section>
       <!-- ======= infoPus Section ======= -->
-      <section id="infoPus" class="infoPus">
+      {{-- <section id="infoPus" class="infoPus">
         <div class="container-fluid mt-5" data-aos="fade-up">
           <div class="section-title">
             <h2>Pencarian Puskesmas</h2>
@@ -99,6 +99,51 @@
               </div>
             </div>
           </div>
+        </div>
+        </div>
+      </section> --}}
+      <!-- End infoPus Us Section -->
+
+      <!-- ======= infoPus Section ======= -->
+      <section id="infoPus" class="infoPus">
+        <div class="container-fluid container-lg mt-5" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Pencarian Puskesmas</h2>
+          </div>
+          <div class="row g-5">
+            <div class="row d-flex">
+
+              <div class="col-md-6 col-sm-6 justify-content-start" style="margin-top:90px">
+
+                <div class="card">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-search"></i></i></span>
+                    </div>
+                    <div class="form-control">
+                      <!-- <label>Cari Nama Ibu Kota Provinsi:</label> -->
+                      <div>
+                        <select name="search-puskesmas" class="selectpicker form-control" data-live-search="true">
+                          <option>Cari Puskesmas</option>
+                          <option>Puskesmas Sobo</option>
+                          <option>Puskesmas Jajag</option>
+                          <option>Puskesmas Badean</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 mb-5 col-sm-6 order-first order-md-last d-flex align-items-center justify-content-center">
+                <div class="img">
+                  <img src="{{asset('siapus/img/informasipuskesmas/1.png') }}" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
         </div>
         </div>
       </section>
@@ -161,7 +206,7 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch mb-5">
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch mb-5" style="margin-left:50px; margin-right:50px">
               <div class="count-box">
                 <img class="imginfoantrean mx-auto" src="{{asset('siapus/img/poli/KIA.png') }}" alt="" />
                 <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
