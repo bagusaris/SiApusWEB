@@ -7,7 +7,8 @@
                 <div class="section-title" style="margin-top: 65px;">
                     <h2>Pendaftaran Antrean Pasien</h2>
                 </div>
-                <form>
+                {{-- <form method="post" action="{{route('tiket')}}"> --}}
+                <form action="{{route('tiket')}}">
                     <div class="form-group mb-3">
                         <label for="exampleFormControlInput1" class="mb-2">NIK</label>
                         <div class="input-group">
@@ -132,14 +133,14 @@
                         </div>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="exampleFormControlSelect1" class="mb-2">Pilih Poli</label>
+                        <label for="exampleFormControlSelect1" class="mb-2">Puskesmas</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="bi bi-file-medical-fill"></i></span>
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="poli" class="form-control"
+                                    <select name="poli" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Poli Tujuan Anda</option>
                                         <option>Poli Umum</option>
@@ -149,6 +150,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                         <div class="col-12 mt-3">
                         <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>

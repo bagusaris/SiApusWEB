@@ -145,10 +145,11 @@ h6 {
 #header {
     background: #fff;
     transition: all 0.5s;
-    z-index: 997;
+    /* z-index: 997; */
     padding: 20px 0;
     top: 40px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 997;
 }
 
 #header .container-fluid {
@@ -861,6 +862,14 @@ section {
     border-radius: 15px;
 }
 
+.infoPus .bootstrap-select .dropdown-menu {
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
 /* search */
 
 .card {
@@ -1205,7 +1214,14 @@ a:hover {
 #daftarantrean .form-control {
     border-color: #65c18c;
 }
-
+#daftar .form-check {
+    margin-left: 100px;
+}
+@media (max-width: 576px) {
+    #daftar .form-check {
+        margin-left: 30px;
+    }
+}
 .buttondaftar {
     text-decoration: none;
     text-transform: uppercase;
@@ -1306,6 +1322,14 @@ a:hover {
     color: #fff;
     text-decoration: none;
     background-color: #65c18c;
+}
+
+.daftarantrean .bootstrap-select .dropdown-menu {
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 5;
 }
 
 /* #daftarantrean .dropdown-menu .transform {
@@ -1547,6 +1571,22 @@ a:hover {
 .antreansaya .img-popupku {
     height: 80px;
 }
+
+/* .modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    z-index: 99999;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+} */
 
 /*--------------------------------------------------------------
   # Footer
