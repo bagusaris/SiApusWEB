@@ -1221,6 +1221,11 @@ section {
     line-height: 1.4;
     text-align: justify;
 }
+@media (max-width: 576px) {
+    .popup-text {
+        text-align: center;
+    }
+}
 
 #popup:target,
 #popupkia:target,

@@ -8,14 +8,14 @@
                     <h2>Pendaftaran Antrean Pasien</h2>
                 </div>
                 {{-- <form method="post" action="{{route('tiket')}}"> --}}
-                <form action="{{route('tiket')}}">
+                <form method="post" action="{{route('pasiens.store')}}">
                     <div class="form-group mb-3">
                         <label for="exampleFormControlInput1" class="mb-2">NIK</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="bi bi-person-lines-fill"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Masukkan nik anda">
+                            <input type="text" name="nik" id="nik" class="form-control" placeholder="Masukkan nik anda">
                         </div>
                     </div>
                     <div class="form-group mb-3">
@@ -24,7 +24,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="bi bi-person-fill"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Masukkan nama anda">
+                            <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan nama anda">
                         </div>
                     </div>
                     <div class="form-group mb-3">
@@ -35,7 +35,7 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="provinsi" class="selectpicker form-control"
+                                    <select name="provinsi" id="provinsi" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Provinsi Anda</option>
                                         <option>Jawa Timur</option>
@@ -54,7 +54,7 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="kota" class="selectpicker form-control"
+                                    <select name="kabupaten" id="kabupaten" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Kabupaten/Kota Anda</option>
                                         <option>Kab. Banyuwangi</option>
@@ -73,7 +73,7 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="kecamatan" class="selectpicker form-control"
+                                    <select name="kecamatan" id="kecamatan" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Kecamatan Anda</option>
                                         <option>Kec. Kabat</option>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="desa" class="selectpicker form-control"
+                                    <select name="kelurahan" id="kelurahan" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Kelurahan/Desa Anda</option>
                                         <option>Kel. Kertosari</option>
@@ -109,7 +109,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="bi bi-house-door-fill"></i></span>
                             </div>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" name="alamat" id="alamat" class="form-control" id="exampleFormControlInput1"
                                 placeholder="Masukkan alamat anda ">
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="puskesmas" class="selectpicker form-control"
+                                    <select name="puskesmas" id="puskesmas" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Puskesmas Tujuan Anda</option>
                                         <option>Puskesmas Kertosari</option>
@@ -140,7 +140,7 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="poli" class="selectpicker form-control"
+                                    <select name="poli" id="poli" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Poli Tujuan Anda</option>
                                         <option>Poli Umum</option>

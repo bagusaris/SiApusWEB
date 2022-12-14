@@ -30,7 +30,14 @@ Route::get('/tiket', function () {
 })->name('tiket');
 
 
-//route untuk poli
-Route::prefix('polis')->group(function(){
-    Route::get('/view',[PoliController::class, 'DetailPoli'])->name('detail.poli');
+// //route untuk poli
+// Route::prefix('polis')->group(function(){
+//     Route::get('/view',[PoliController::class, 'DetailPoli'])->name('detail.poli');
+// });
+
+//route untuk pasien
+Route::prefix('pasiens')->group(function(){
+    Route::get('/view',[PasienController::class, 'PasienView'])->name('pasien.view');
+    Route::get('/add',[PasienController::class, 'PasienAdd'])->name('pasien.add');
+    Route::post('/store',[PasienController::class, 'PasiensStore'])->name('pasiens.store');
 });
