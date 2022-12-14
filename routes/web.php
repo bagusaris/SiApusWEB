@@ -28,3 +28,9 @@ Route::get('/daftar', function () {
 Route::get('/tiket', function () {
     return view('siapus.antreansaya');
 })->name('tiket');
+
+
+//route untuk poli
+Route::prefix('polis')->group(function(){
+    Route::get('/view',[PoliController::class, 'DetailPoli'])->name('detail.poli');
+});
