@@ -27,7 +27,7 @@
                             <input type="text" class="form-control" placeholder="Masukkan nama anda">
                         </div>
                     </div>
-                    {{-- <div class="form-group mb-3">
+                    <div class="form-group mb-3">
                         <label for="exampleFormControlSelect1" class="mb-2">Provinsi</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -102,7 +102,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
                     <div class="form-group mb-3">
                         <label for="exampleFormControlInput1" class="mb-2">Alamat Lengkap</label>
                         <div class="input-group">

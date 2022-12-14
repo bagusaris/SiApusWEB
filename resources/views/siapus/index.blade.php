@@ -105,7 +105,7 @@
       <!-- End infoPus Us Section -->
 
       <!-- ======= infoPus Section ======= -->
-      <section id="infoPus" class="infoPus">
+      {{-- <section id="infoPus" class="infoPus">
         <div class="container-fluid container-lg mt-5" data-aos="fade-up">
           <div class="section-title">
             <h2>Pencarian Puskesmas</h2>
@@ -146,11 +146,11 @@
         </div>
         </div>
         </div>
-      </section>
+      </section> --}}
       <!-- End infoPus Us Section -->
 
       <!-- ======= Puskesmas Terpilih Section ======= -->
-      <section id="aboutPus" class="aboutPus">
+      {{-- <section id="aboutPus" class="aboutPus">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Puskesmas Badean</h2>
@@ -180,7 +180,63 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> --}}
+
+      <section id="aboutPus" class="aboutPus">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Pencarian Puskesmas</h2>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="col-md-6 col-sm-6 justify-content-start">
+
+                        <div class="card">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-search"></i></i></span>
+                                </div>
+                                <div class="form-control">
+                                    <div>
+                                        <select name="search-puskesmas" class="selectpicker form-control"
+                                            data-live-search="true">
+                                            <option>Cari Puskesmas</option>
+                                            <option>Puskesmas Sobo</option>
+                                            <option>Puskesmas Jajag</option>
+                                            <option>Puskesmas Badean</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-2 order-lg-1 mx-5" data-aos="fade-right">
+                    <h4>Puskesmas Badean</h4>
+                    <div class="image" style="background-image: url('{{asset('siapus/img/aboutPus.png') }}')"
+                        data-aos="zoom-in">
+                    </div>
+                        <div class="icon-box mt-5 mt-lg-0">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Alamat</h4>
+                            <p>
+                                Jl Raya Badean No 74 Badean Kec. Blimbingsari - Banyuwangi,
+                                68461
+                            </p>
+                        </div>
+                        <div class="icon-box mt-5">
+                            <i class="bi bi-telephone"></i>
+                            <h4>Nomor Handphone</h4>
+                            <p>0333-630987 / 081259753040</p>
+                        </div>
+                        <div class="icon-box mt-5">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email</h4>
+                            <p>Pkm_Badean@yahoo.co.id</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
       <!-- End Puskesmas Terpilih Section -->
 
       <!-- ======= Informasi Nomor Antrean Section ======= -->

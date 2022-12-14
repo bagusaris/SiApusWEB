@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id ('id_pasien') -> primaryKey();
             $table->string ('nik');
             $table->string ('nama_pasien');
-            // $table->string ('provinsi');
-            // $table->string ('kabupaten');
-            // $table->string ('kecamatan');
-            // $table->string ('kelurahan');
+            $table->string ('provinsi');
+            $table->string ('kabupaten');
+            $table->string ('kecamatan');
+            $table->string ('kelurahan');
             $table->string ('alamat');
             $table->unsignedBigInteger ('id_puskesmas');
             $table->foreign('id_puskesmas')->references('id_puskesmas')->on('puskesmas');
