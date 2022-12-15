@@ -10,7 +10,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container-fluid d-flex align-items-center">
-      <a href="{{route('beranda')}}" class="logo me-auto"><img src="{{asset('siapus/img/SiApusLogo.png') }}" alt="" href="" /></a>
+      <a href="{{route('puskesmas.index')}}" class="logo me-auto"><img src="{{asset('siapus/img/SiApusLogo.png') }}" alt="" href="" /></a>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto" href="{{route('beranda')}}">Beranda</a></li>

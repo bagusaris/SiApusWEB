@@ -189,7 +189,7 @@
                 </div>
                 <div class="row d-flex align-items-center justify-content-center">
                     <div class="col-md-6 col-sm-6 justify-content-start">
-
+                    
                         <div class="card">
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -197,12 +197,12 @@
                                 </div>
                                 <div class="form-control">
                                     <div>
-                                        <select name="search-puskesmas" class="selectpicker form-control"
+                                        <select name="id_puskesmas" id="id_puskesmas" class="selectpicker form-control"
                                             data-live-search="true">
                                             <option>Cari Puskesmas</option>
-                                            <option>Puskesmas Sobo</option>
-                                            <option>Puskesmas Jajag</option>
-                                            <option>Puskesmas Badean</option>
+                                          @foreach ($puskesmas as $pusk)
+                                                    <option value="{{ $pusk->id_puskesmas }}" > {{ $pusk->nama_puskesmas }} </option>
+                                                @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -210,14 +210,14 @@
                         </div>
                     </div>
                     <div class="col-lg-4 order-2 order-lg-1 mx-5" data-aos="fade-right">
-                    <h4>Puskesmas Badean</h4>
+                    <h4 id="nama_puskesmas">Puskesmas Badean</h4>
                     <div class="image" style="background-image: url('{{asset('siapus/img/aboutPus.png') }}')"
                         data-aos="zoom-in">
                     </div>
                         <div class="icon-box mt-5 mt-lg-0">
                             <i class="bi bi-geo-alt"></i>
                             <h4>Alamat</h4>
-                            <p>
+                            <p id="alamat_puskesmas">
                                 Jl Raya Badean No 74 Badean Kec. Blimbingsari - Banyuwangi,
                                 68461
                             </p>
@@ -225,18 +225,17 @@
                         <div class="icon-box mt-5">
                             <i class="bi bi-telephone"></i>
                             <h4>Nomor Handphone</h4>
-                            <p>0333-630987 / 081259753040</p>
+                            <p id="telp_puskesmas">0333-630987 / 081259753040</p>
                         </div>
                         <div class="icon-box mt-5">
                             <i class="bi bi-envelope"></i>
                             <h4>Email</h4>
-                            <p>Pkm_Badean@yahoo.co.id</p>
+                            <p id="email_puskesmas">Pkm_Badean@yahoo.co.id</p>
                         </div>
                         <div class="icon-box mt-5">
                             <i class="bi bi-clock"></i>
                             <h4>Jam Kerja</h4>
-                            <p>Senin - Kamis : 08.00 - 11.00</p>
-                            <p>Jumat dan Sabtu : 08.00 - 10.00</p>
+                            <p id="jam_kerja">Senin - Kamis : 08.00 - 11.00</p>
                         </div>
                     </div>
                 </div>
@@ -305,6 +304,24 @@
   </main>
   <!-- End #main -->
 
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $( "select" ) .change(function () {    
+      var selPus = document.getElementById("id_puskesmas").value
+      $.get("/puskesmas/index", (res) => {
+        res.data.forEach((item, index) => {
+          console.log(item);
+          if(selPus==item.id_puskesmas){
+            document.getElementById("nama_puskesmas").innerHTML = item.nama_puskesmas;
+            document.getElementById("alamat_puskesmas").innerHTML = item.alamat_puskesmas;
+            document.getElementById("telp_puskesmas").innerHTML = item.telp_puskesmas;
+            document.getElementById("email_puskesmas").innerHTML = item.email_puskesmas;
+            document.getElementById("jam_kerja").innerHTML = item.jam_kerja;
+          }
+         })
+    });
+})
+  </script>
  
   @endsection
   
