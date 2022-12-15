@@ -1223,7 +1223,7 @@ section {
 }
 @media (max-width: 576px) {
     .popup-text {
-        text-align: center;
+        text-align: left;
     }
 }
 

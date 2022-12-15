@@ -12,6 +12,14 @@ class poli extends Model
     protected $primaryKey = 'id_poli';
     protected $table = 'polis';
 
+    protected $fillable = [
+        'id_puskesmas',
+        'kode_poli',
+        'nama_poli',
+        'deskripsi_poli',
+        'logo_poli'
+      ];
+
     public function puskesmas(){
         return $this->belongsTo(puskesmas::class);
     }

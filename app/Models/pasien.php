@@ -12,6 +12,19 @@ class pasien extends Model
     protected $primaryKey = 'id_pasien';
     protected $table = 'pasiens';
 
+    protected $fillable = [
+        'id_puskesmas',
+        'id_poli',
+        'nik',
+        'nama_pasien',
+        'provinsi',
+        'kabupaten',
+        'kecamatan',
+        'kelurahan',
+        'alamat',
+      ];
+    
+
     public function puskesmas(){
         return $this->belongsTo(puskesmas::class);
     }

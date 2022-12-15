@@ -8,7 +8,8 @@
                     <h2>Pendaftaran Antrean Pasien</h2>
                 </div>
                 {{-- <form method="post" action="{{route('tiket')}}"> --}}
-                <form method="post" action="{{route('pasiens.store')}}">
+                <form method="post" action="{{route('pasiens.store')}}" enctype="multipart/form-data">
+                @csrf
                     <div class="form-group mb-3">
                         <label for="exampleFormControlInput1" class="mb-2">NIK</label>
                         <div class="input-group">
@@ -24,7 +25,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="bi bi-person-fill"></i></span>
                             </div>
-                            <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan nama anda">
+                            <input type="text" name="nama_pasien" id="nama_pasien" class="form-control" placeholder="Masukkan nama anda">
                         </div>
                     </div>
                     <div class="form-group mb-3">
@@ -38,9 +39,9 @@
                                     <select name="provinsi" id="provinsi" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Provinsi Anda</option>
-                                        <option>Jawa Timur</option>
-                                        <option>Jawa Barat</option>
-                                        <option>Jawa Tengah</option>
+                                        <option value="1">Jawa Timur</option>
+                                        <option value="2">Jawa Barat</option>
+                                        <option value="3">Jawa Tengah</option>
                                     </select>
                                 </div>
                             </div>
@@ -57,9 +58,9 @@
                                     <select name="kabupaten" id="kabupaten" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Kabupaten/Kota Anda</option>
-                                        <option>Kab. Banyuwangi</option>
-                                        <option>Kota Malang</option>
-                                        <option>Kab. Jember</option>
+                                        <option value="1">Kab. Banyuwangi</option>
+                                        <option value="2">Kota Malang</option>
+                                        <option value="3">Kab. Jember</option>
                                     </select>
                                 </div>
                             </div>
@@ -76,9 +77,9 @@
                                     <select name="kecamatan" id="kecamatan" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Kecamatan Anda</option>
-                                        <option>Kec. Kabat</option>
-                                        <option>Kec. Blimbingsari</option>
-                                        <option>Kec. Rogojampi</option>
+                                        <option value="1">Kec. Kabat</option>
+                                        <option value="2">Kec. Blimbingsari</option>
+                                        <option value="3">Kec. Rogojampi</option>
                                     </select>
                                 </div>
                             </div>
@@ -95,9 +96,9 @@
                                     <select name="kelurahan" id="kelurahan" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Kelurahan/Desa Anda</option>
-                                        <option>Kel. Kertosari</option>
-                                        <option>Desa Blimbingsari</option>
-                                        <option>Desa Macan Putih</option>
+                                        <option value="1">Kel. Kertosari</option>
+                                        <option value="2">Desa Blimbingsari</option>
+                                        <option value="3">Desa Macan Putih</option>
                                     </select>
                                 </div>
                             </div>
@@ -121,12 +122,12 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="puskesmas" id="puskesmas" class="selectpicker form-control"
+                                    <select name="id_puskesmas" id="id_puskesmas" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Puskesmas Tujuan Anda</option>
-                                        <option>Puskesmas Kertosari</option>
-                                        <option>Puskesmas Sobo</option>
-                                        <option>Puskesmas Mojopanggung</option>
+                                        @foreach ($puskesmas as $pusk)
+                                                    <option value="{{ $pusk->id_puskesmas }}" > {{ $pusk->nama_puskesmas }} </option>
+                                                @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -140,12 +141,12 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="poli" id="poli" class="selectpicker form-control"
+                                    <select name="id_poli" id="id_poli" class="selectpicker form-control"
                                         data-live-search="true">
                                         <option>Pilih Poli Tujuan Anda</option>
-                                        <option>Poli Umum</option>
-                                        <option>Poli KIA</option>
-                                        <option>Poli Gigi</option>
+                                       @foreach ($poli as $pol)
+                                                    <option value="{{ $pol->id_poli }}" > {{ $pol->nama_poli }} </option>
+                                                @endforeach
                                     </select>
                                 </div>
                             </div>

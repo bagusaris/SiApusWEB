@@ -18,7 +18,7 @@
             <a class="nav-link scrollto" href="{{route('informasipoli')}}">Informasi Poli</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="{{route('daftar')}}">Pendaftaran Antrean</a>
+            <a class="nav-link scrollto" href="{{route('pasiens.create')}}">Pendaftaran Antrean</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="{{route('tiket')}}">Antrean Saya</a>

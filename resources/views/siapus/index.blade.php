@@ -14,7 +14,7 @@
                 <h2>Selamat Datang di <span>SI APUS</span></h2>
                 <p>SI APUS merupakan Sistem Antrean Puskesmas Banyuwangi</p>
                 <p>DENGAN SI APUS KE PUSKESMAS JADI MULUS</p>
-                <a href="{{route('daftar')}}" class="btn-get-started scrollto">Daftar Sekarang</a>
+                <a href="{{route('pasiens.create')}}" class="btn-get-started scrollto">Daftar Sekarang</a>
               </div>
             </div>
 
@@ -24,7 +24,7 @@
                 <h2>Selamat Datang di <span>SI APUS</span></h2>
                 <p>SI APUS merupakan Sistem Antrean Puskesmas Banyuwangi</p>
                 <p>DENGAN SI APUS KE PUSKESMAS JADI MULUS</p>
-                <a href="pendaftaranantrean.html" class="btn-get-started scrollto">Daftar Sekarang</a>
+                <a href="{{route('pasiens.create')}}" class="btn-get-started scrollto">Daftar Sekarang</a>
               </div>
             </div>
 
@@ -34,7 +34,7 @@
                 <h2>Selamat Datang di <span>SI APUS</span></h2>
                 <p>SI APUS merupakan Sistem Antrean Puskesmas Banyuwangi</p>
                 <p>DENGAN SI APUS KE PUSKESMAS JADI MULUS</p>
-                <a href="pendaftaranantrean.html" class="btn-get-started scrollto">Daftar Sekarang</a>
+                <a href="{{route('pasiens.create')}}" class="btn-get-started scrollto">Daftar Sekarang</a>
               </div>
             </div>
           </div>
@@ -232,6 +232,12 @@
                             <h4>Email</h4>
                             <p>Pkm_Badean@yahoo.co.id</p>
                         </div>
+                        <div class="icon-box mt-5">
+                            <i class="bi bi-clock"></i>
+                            <h4>Jam Kerja</h4>
+                            <p>Senin - Kamis : 08.00 - 11.00</p>
+                            <p>Jumat dan Sabtu : 08.00 - 10.00</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -257,7 +263,7 @@
                 </p>
                 <div
                   class="col-md-12 col-sm-6 order-first order-md-last d-flex align-items-center justify-content-center">
-                  <a href="{{route('daftar')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
+                  <a href="{{route('pasiens.create')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
                 </div>
               </div>
             </div>
@@ -272,7 +278,7 @@
                 </p>
                 <div
                   class="col-md-12 col-sm-6 order-first order-md-last d-flex align-items-center justify-content-center">
-                  <a href="{{route('daftar')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
+                  <a href="{{route('pasiens.create')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
                 </div>
               </div>
             </div>
@@ -287,7 +293,7 @@
                 </p>
                 <div
                   class="col-md-12 col-sm-6 order-first order-md-last d-flex align-items-center justify-content-center">
-                  <a href="{{route('daftar')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
+                  <a href="{{route('pasiens.create')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
                 </div>
               </div>
             </div>

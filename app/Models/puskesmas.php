@@ -11,4 +11,13 @@ class puskesmas extends Model
 
     protected $primaryKey = 'id_puskesmas';
     protected $table = 'puskesmas';
+
+    protected $fillable = [
+        'nama_puskesmas',
+        'email_puskesmas',
+        'telp_puskesmas',
+        'alamat_puskesmas',
+        'foto_puskesmas',
+        'jam_kerja',
+      ];
 }

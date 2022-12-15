@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('polis', function (Blueprint $table) {
             $table->id ('id_poli') -> primaryKey();
+            $table->string('kode_poli');
             $table->unsignedBigInteger ('id_puskesmas');
             $table->foreign('id_puskesmas')->references('id_puskesmas')->on('puskesmas');
             $table->string ('nama_poli');
