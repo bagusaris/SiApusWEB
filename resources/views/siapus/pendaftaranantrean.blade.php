@@ -14,7 +14,7 @@
                         <label for="exampleFormControlInput1" class="mb-2">NIK</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="bi bi-person-lines-fill"></i></span>
+                                <span class="input-group-text"> <i class="fa-solid fa-address-card"></i></span>
                             </div>
                             <input type="text" name="nik" id="nik" class="form-control" placeholder="Masukkan nik anda">
                         </div>
@@ -23,7 +23,7 @@
                         <label for="exampleFormControlInput1" class="mb-2">Nama</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="bi bi-person-fill"></i></span>
+                                <span class="input-group-text"> <i class="fa-solid fa-user"></i></span>
                             </div>
                             <input type="text" name="nama_pasien" id="nama_pasien" class="form-control" placeholder="Masukkan nama anda">
                         </div>
@@ -32,7 +32,7 @@
                         <label for="exampleFormControlSelect1" class="mb-2">Provinsi</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="bi bi-globe"></i></i></span>
+                                <span class="input-group-text"> <i class="fa-solid fa-globe"></i></i></span>
                             </div>
                             <div class="form-control">
                                 <div>
@@ -51,7 +51,7 @@
                         <label for="exampleFormControlSelect1" class="mb-2">Kabupaten</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="bi bi-geo-fill"></i></span>
+                                <span class="input-group-text"> <i class="fa-solid fa-location-dot"></i></span>
                             </div>
                             <div class="form-control">
                                 <div>
@@ -70,7 +70,7 @@
                         <label for="exampleFormControlSelect1" class="mb-2">Kecamatan</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="bi bi-geo-alt-fill"></i></span>
+                                <span class="input-group-text"> <i class="fa-solid fa-landmark"></i></span>
                             </div>
                             <div class="form-control">
                                 <div>
@@ -89,7 +89,7 @@
                         <label for="exampleFormControlSelect1" class="mb-2">Kelurahan/Desa</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="bi bi-geo-alt"></i></span>
+                                <span class="input-group-text"> <i class="fa-sharp fa-solid fa-building"></i></span>
                             </div>
                             <div class="form-control">
                                 <div>
@@ -108,7 +108,7 @@
                         <label for="exampleFormControlInput1" class="mb-2">Alamat Lengkap</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="bi bi-house-door-fill"></i></span>
+                                <span class="input-group-text"> <i class="fa-solid fa-house"></i></span>
                             </div>
                             <input type="text" name="alamat" id="alamat" class="form-control" id="exampleFormControlInput1"
                                 placeholder="Masukkan alamat anda ">
@@ -118,7 +118,7 @@
                         <label for="exampleFormControlSelect1" class="mb-2">Puskesmas</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="bi bi-hospital-fill"></i></span>
+                                <span class="input-group-text"> <i class="fa-sharp fa-solid fa-hospital"></i></span>
                             </div>
                             <div class="form-control">
                                 <div>
@@ -137,7 +137,7 @@
                         <label for="exampleFormControlSelect1" class="mb-2">Poli</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="bi bi-file-medical-fill"></i></span>
+                                <span class="input-group-text"> <i class="fa-solid fa-stethoscope"></i></span>
                             </div>
                             <div class="form-control">
                                 <div>
