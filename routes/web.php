@@ -30,8 +30,12 @@ Route::get('/tiket', function () {
 })->name('tiket');
 
 //pasien
+Route::get('/kabupaten', [PasienController::class, 'kabupaten'])->name('kabupaten.kabupaten');
+Route::get('/kecamatan', [PasienController::class, 'kecamatan'])->name('kecamatan.kecamatan');
+Route::get('/desa', [PasienController::class, 'desa'])->name('desa.desa');
 Route::Resource('/pasiens', PasienController::class);
 
 //puskesmas
 Route::get('/puskesmas/index', [PuskesmasController::class, 'get'])->name('puskesmas.get');
+Route::get('/poli/find', [PuskesmasController::class, 'poli'])->name('puskesmas.poli');
 Route::Resource('/puskesmas', PuskesmasController::class);

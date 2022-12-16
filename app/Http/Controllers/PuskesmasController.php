@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\puskesmas;
-
+use App\Models\poli;
 class PuskesmasController extends Controller
 {
     const FETCHED_ATTRIBUTE = [
@@ -95,5 +95,10 @@ class PuskesmasController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function poli(Request $request)
+    {
+        $poli= poli::where('id_puskesmas', $request->id)->get();
+        return response()->json($poli);
     }
 }

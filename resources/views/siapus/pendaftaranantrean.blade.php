@@ -36,12 +36,11 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="provinsi" id="provinsi" class="selectpicker form-control"
-                                        data-live-search="true">
-                                        <option>Pilih Provinsi Anda</option>
-                                        <option value="1">Jawa Timur</option>
-                                        <option value="2">Jawa Barat</option>
-                                        <option value="3">Jawa Tengah</option>
+                                    <select name="provinsi" id="provinsi" class="form-select" data-live-search="true">
+                                        <option selected disabled value="">Provinsi</option>
+                                        @foreach($data_provinsi as $provinsi)
+                                        <option value="{{$provinsi['id']}}">{{$provinsi['name']}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -55,12 +54,8 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="kabupaten" id="kabupaten" class="selectpicker form-control"
-                                        data-live-search="true">
-                                        <option>Pilih Kabupaten/Kota Anda</option>
-                                        <option value="1">Kab. Banyuwangi</option>
-                                        <option value="2">Kota Malang</option>
-                                        <option value="3">Kab. Jember</option>
+                                    <select name="kabupaten" id="kabupaten" class="form-select" data-live-search="true">
+                                        <option selected disabled value="">Pilih Kabupaten/Kota Anda</option>
                                     </select>
                                 </div>
                             </div>
@@ -74,12 +69,9 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="kecamatan" id="kecamatan" class="selectpicker form-control"
+                                    <select name="kecamatan" id="kecamatan" class="form-select"
                                         data-live-search="true">
-                                        <option>Pilih Kecamatan Anda</option>
-                                        <option value="1">Kec. Kabat</option>
-                                        <option value="2">Kec. Blimbingsari</option>
-                                        <option value="3">Kec. Rogojampi</option>
+                                        <option selected disabled value="">Pilih Kecamatan Anda</option>
                                     </select>
                                 </div>
                             </div>
@@ -93,12 +85,9 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="kelurahan" id="kelurahan" class="selectpicker form-control"
+                                    <select name="kelurahan" id="kelurahan" class="form-select"
                                         data-live-search="true">
-                                        <option>Pilih Kelurahan/Desa Anda</option>
-                                        <option value="1">Kel. Kertosari</option>
-                                        <option value="2">Desa Blimbingsari</option>
-                                        <option value="3">Desa Macan Putih</option>
+                                        <option selected disabled value="">Pilih Kelurahan/Desa Anda</option>
                                     </select>
                                 </div>
                             </div>
@@ -122,7 +111,7 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="id_puskesmas" id="id_puskesmas" class="selectpicker form-control"
+                                    <select name="id_puskesmas" id="id_puskesmas" class="form-select"
                                         data-live-search="true">
                                         <option>Pilih Puskesmas Tujuan Anda</option>
                                         @foreach ($puskesmas as $pusk)
@@ -141,12 +130,9 @@
                             </div>
                             <div class="form-control">
                                 <div>
-                                    <select name="id_poli" id="id_poli" class="selectpicker form-control"
+                                    <select name="id_poli" id="id_poli" class="form-select"
                                         data-live-search="true">
                                         <option>Pilih Poli Tujuan Anda</option>
-                                       @foreach ($poli as $pol)
-                                                    <option value="{{ $pol->id_poli }}" > {{ $pol->nama_poli }} </option>
-                                                @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -188,3 +174,51 @@
     </section>
 
 @endsection
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+     function onChangeSelect(url, id, name) {
+        $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: "json",
+        data: {
+            id: id
+        },
+        success: function(data) {
+            $('#' + name).empty();
+            if (name == "id_poli") {
+                $('#' + name).append('<option selected disabled value="">Poli</option> ');
+            } else if (name == "kabupaten") {
+                console.log(name);
+                $('#' + name).append('<option selected disabled value="">kabupaten</option> ');
+            }else if (name == "kecamatan") {
+                $('#' + name).append('<option selected disabled value="">kecamatan</option> ');
+            }else if (name == "kelurahan") {
+                $('#' + name).append('<option selected disabled value="">kelurahan</option> ');
+            }
+            data.forEach(el => {
+            if (el.id_poli) {
+                $('#' + name).append('<option value="' + el.id_poli + '">' + el.nama_poli + '</option>');
+            } else {
+                $('#' + name).append('<option value="' + el.id + '">' + el.name + '</option>');
+            }
+            })
+        }
+        });
+    }
+
+  $(function() {
+    $('#provinsi').on('change', function() {
+      onChangeSelect('{{ route("kabupaten.kabupaten") }}', $(this).val(), 'kabupaten');
+    });
+    $('#kabupaten').on('change', function() {
+      onChangeSelect('{{ route("kecamatan.kecamatan") }}', $(this).val(), 'kecamatan');
+    });
+    $('#kecamatan').on('change', function() {
+      onChangeSelect('{{ route("desa.desa") }}', $(this).val(), 'kelurahan');
+    });
+    $('#id_puskesmas').on('change', function() {
+      onChangeSelect('{{ route("puskesmas.poli") }}', $(this).val(), 'id_poli');
+    });
+  });
+</script>

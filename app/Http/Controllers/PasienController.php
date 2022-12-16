@@ -7,7 +7,7 @@ use App\Models\pasien;
 use App\Models\puskesmas;
 use App\Models\poli;
 use App\Models\antrean;
-
+use Illuminate\Support\Facades\Http;
 
 class PasienController extends Controller
 {
@@ -36,8 +36,9 @@ class PasienController extends Controller
     {
         //
         $puskesmas = puskesmas::all();
-        $poli = poli::all();
-        return view('siapus.pendaftaranantrean', compact('puskesmas', 'poli'));
+        $provinsi = Http::get('https://region-api.profileimage.studio/provinces');
+        $data_provinsi = $provinsi->json('data');
+        return view('siapus.pendaftaranantrean', compact('puskesmas', 'data_provinsi'));
     }
 
     /**
@@ -49,19 +50,51 @@ class PasienController extends Controller
     public function store(Request $request)
     {
         //
+        dd('ss');
         $data = $request->only(self::FETCHED_ATTRIBUTE);
         $validatedData=$request->validate([
             'nik' =>'required|unique:pasiens',
         ]);
         
-        $pasien = pasien::create($data);
-        $antrean = antrean::create([
-            'nomor_antrean' => 'A001',
-            'status' => 'menunggu',
-            'id_puskesmas' => $data['id_puskesmas'],
-            'id_poli' => $data['id_poli'],
-            'id_pasien' => $pasien->id_pasien,
-        ]);
+        $find_puskesmas=poli::where('id_puskesmas',$data['id_puskesmas'])->get();
+       
+        foreach ($find_puskesmas as $item_puskesmas) {
+            if($data['id_poli']==$item_puskesmas->id_poli){
+                $uuid = $item_puskesmas->kode_poli . '0001';
+                $no = 1;
+                $find_antrian = antrean::where('id_poli', $data['id_poli'])->where('id_puskesmas',$data['id_puskesmas'])->orderByDesc('nomer')->first();
+                
+                if ($find_antrian) {
+                    $current_number = explode($item_puskesmas->kode_poli,$find_antrian->nomer);
+                    $digit=strlen($current_number[0]+1);
+                    if ($digit == 1) {
+                        $uuid = $item_puskesmas->kode_poli . '000' . $digit + 1;
+                        $no= $digit + 1;
+                    } else if ($digit == 2) {
+                        $uuid = $item_puskesmas->kode_poli . '00' . $digit + 1;
+                        $no= $digit + 1;
+                    } else if ($digit == 3) {
+                        $uuid = $item_puskesmas->kode_poli . '0' . $digit + 1;
+                        $no= $digit + 1;
+                    } else if ($digit == 4) {
+                        $uuid = $item_puskesmas->kode_poli . $digit + 1;
+                        $no= $digit + 1;
+                    }
+                }
+                // dd($uuid,$no);
+                $pasien = pasien::create($data);
+                $antrean = antrean::create([
+                    'nomor_antrean' => $uuid,
+                    'nomer'=>$no,
+                    'status' => 'menunggu',
+                    'id_puskesmas' => $data['id_puskesmas'],
+                    'id_poli' => $data['id_poli'],
+                    'id_pasien' => $pasien->id_pasien,
+                ]);
+            }
+        }
+        
+        
 
         return redirect('/tiket');
     }
@@ -109,5 +142,50 @@ class PasienController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function kabupaten(Request $request)
+    {
+        $kabupaten = Http::get('https://region-api.profileimage.studio/regencies');
+        $data_kabupaten = $kabupaten->json('data');
+        $kab = [];
+        foreach ($data_kabupaten as $item) {
+            if ($item['province_id'] == $request->id) {
+                array_push($kab, (object)[
+                    'id' => $item['id'],
+                    'name' => $item['name']
+                ]);
+            }
+        }
+        return response()->json($kab);
+    }
+    public function kecamatan(Request $request)
+    {
+        $kecamatan = Http::get('https://region-api.profileimage.studio/districts');
+        $data_kecamatan = $kecamatan->json('data');
+        $kec = [];
+        foreach ($data_kecamatan as $item) {
+            if ($item['regency_id'] == $request->id) {
+                array_push($kec, (object)[
+                    'id' => $item['id'],
+                    'name' => $item['name']
+                ]);
+            }
+        }
+        return response()->json($kec);
+    }
+    public function desa(Request $request)
+    {
+        $desa = Http::get('https://region-api.profileimage.studio/villages');
+        $data_desa = $desa->json('data');
+        $kec = [];
+        foreach ($data_desa as $item) {
+            if ($item['district_id'] == $request->id) {
+                array_push($kec, (object)[
+                    'id' => $item['id'],
+                    'name' => $item['name']
+                ]);
+            }
+        }
+        return response()->json($kec);
     }
 }

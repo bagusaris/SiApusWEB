@@ -16,6 +16,7 @@ class antrean extends Model
         'id_poli',
         'id_pasien',
         'nomor_antrean',
+        'nomer',
         'status',
       ];
 
