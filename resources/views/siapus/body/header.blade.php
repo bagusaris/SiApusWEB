@@ -2,7 +2,11 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex align-items-center justify-content-center">
       <div class="align-items-center d-md-flex">
-        <i class="bi bi-clock"></i> Senin - Sabtu, 08.00-11.00
+        <i class="bi bi-clock"></i>
+        <?php 
+                date_default_timezone_set('Asia/Jakarta');
+                echo date('l, d-m-Y  H:i:s'); //kombinasi jam dan tanggal
+              ?>
       </div>
     </div>
   </div>

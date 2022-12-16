@@ -990,7 +990,7 @@ section {
 /*--------------------------------------------------------------
   # About Pus
   --------------------------------------------------------------*/
-.aboutPus .icon-box h4 {
+/* .aboutPus .icon-box h4 {
     font-size: 20px;
     font-weight: 700;
     margin: 5px 0 10px 60px;
@@ -1050,6 +1050,110 @@ section {
 @media (max-width: 992px) {
     .aboutPus .image {
         margin-top: 50px;
+    }
+} */
+
+/*--------------------------------------------------------------
+  # About Pus
+  --------------------------------------------------------------*/
+.aboutPus .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0 10px 60px;
+}
+
+.aboutPus h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0 10px 60px;
+}
+
+.aboutPus h3 {
+    font-size: 20px;
+    font-weight: 700;
+    /* margin: 5px 0 10px 60px; */
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.aboutPus .icon-box i {
+    font-size: 40px;
+    float: left;
+    color: #65c18c;
+}
+
+.aboutPus .icon-box p {
+    font-size: 15px;
+    color: #848484;
+    margin-left: 60px;
+}
+
+.aboutPus .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+.aboutPus .row {
+    padding: 40px;
+    /* background: #ade5c4; */
+    border-radius: 30px;
+    margin-top: -40px;
+    border-color: #000;
+}
+
+.aboutPus .bootstrap-select .dropdown-menu {
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.aboutPus .dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #65c18c;
+}
+
+.aboutPus .card {
+    background-color: #fff;
+    padding: 15px;
+    border: none;
+    margin-bottom: 100px;
+}
+
+.aboutPus .image-searchpus {
+    max-width: 250px;
+    display: block;
+    margin: auto;
+}
+
+.aboutPus .title-search {
+    font-size: 30px;
+}
+
+@media (max-width: 992px) {
+    .aboutPus .image {
+        margin-top: 50px;
+    }
+
+    .aboutPus .title-search {
+        font-size: 20px;
+    }
+
+    .aboutPus .image-searchpus {
+        max-width: 250px;
+    }
+
+    .aboutPus .card {
+        margin-bottom: 50px;
     }
 }
 

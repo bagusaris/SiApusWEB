@@ -191,6 +191,9 @@
                     <div class="col-md-6 col-sm-6 justify-content-start">
                     
                         <div class="card">
+                         <img class="image-searchpus" src="{{asset('siapus/img/doctor-1.png') }}" alt="">
+                            <label for="exampleFormControlInput1" class="mb-2 title-search">Silahkan Pilih
+                                Puskesmas Yang Dituju</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-search"></i></i></span>
@@ -210,27 +213,26 @@
                         </div>
                     </div>
                     <div class="col-lg-4 order-2 order-lg-1 mx-5" data-aos="fade-right">
-                    <h4 id="nama_puskesmas">Puskesmas Badean</h4>
-                    <div class="image" style="background-image: url('{{asset('siapus/img/aboutPus.png') }}')"
+                    <h3 id="nama_puskesmas">Dinas Kesehatan Banyuwangi</h3>
+                    <div class="image" style="background-image: url('{{asset('siapus/img/dinkes.jpg') }}')"
                         data-aos="zoom-in">
                     </div>
                         <div class="icon-box mt-5 mt-lg-0">
                             <i class="bi bi-geo-alt"></i>
                             <h4>Alamat</h4>
                             <p id="alamat_puskesmas">
-                                Jl Raya Badean No 74 Badean Kec. Blimbingsari - Banyuwangi,
-                                68461
+                                 Jl. Letkol Istiqlah No.42, Singonegaran, Kec. Banyuwangi, Kab. Banyuwangi.
                             </p>
                         </div>
                         <div class="icon-box mt-5">
                             <i class="bi bi-telephone"></i>
-                            <h4>Nomor Handphone</h4>
-                            <p id="telp_puskesmas">0333-630987 / 081259753040</p>
+                            <h4>Nomor Telepon</h4>
+                            <p id="telp_puskesmas">(0333) 424794</p>
                         </div>
                         <div class="icon-box mt-5">
                             <i class="bi bi-envelope"></i>
                             <h4>Email</h4>
-                            <p id="email_puskesmas">Pkm_Badean@yahoo.co.id</p>
+                            <p id="email_puskesmas">dinkesbanyuwangi@yahoo.co.id</p>
                         </div>
                         <div class="icon-box mt-5">
                             <i class="bi bi-clock"></i>
