@@ -214,8 +214,9 @@
                     </div>
                     <div class="col-lg-4 order-2 order-lg-1 mx-5" data-aos="fade-right">
                     <h3 id="nama_puskesmas">Dinas Kesehatan Banyuwangi</h3>
-                    <div class="image" style="background-image: url('{{asset('siapus/img/dinkes.jpg') }}')"
+                    <div class="image"  
                         data-aos="zoom-in">
+                        <img id="gambar" src="{{ asset('siapus/img/dinkes.jpg') }}" >
                     </div>
                         <div class="icon-box mt-5 mt-lg-0">
                             <i class="bi bi-geo-alt"></i>
@@ -237,7 +238,7 @@
                         <div class="icon-box mt-5">
                             <i class="bi bi-clock"></i>
                             <h4>Jam Kerja</h4>
-                            <p id="jam_kerja">Senin - Kamis : 08.00 - 11.00</p>
+                            <p id="jam_kerja">Senin - Jumat : 08.00 - 15.00</p>
                         </div>
                     </div>
                 </div>
@@ -312,8 +313,8 @@
       var selPus = document.getElementById("id_puskesmas").value
       $.get("/puskesmas/index", (res) => {
         res.data.forEach((item, index) => {
-          console.log(item);
           if(selPus==item.id_puskesmas){
+            document.getElementById("gambar").src='/siapus/img/'+ item.foto_puskesmas;
             document.getElementById("nama_puskesmas").innerHTML = item.nama_puskesmas;
             document.getElementById("alamat_puskesmas").innerHTML = item.alamat_puskesmas;
             document.getElementById("telp_puskesmas").innerHTML = item.telp_puskesmas;

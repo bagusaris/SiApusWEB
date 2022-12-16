@@ -9,6 +9,16 @@ class antrean extends Model
 {
     use HasFactory;
 
+    protected $table = 'antreans';
+
+    protected $fillable = [
+        'id_puskesmas',
+        'id_poli',
+        'id_pasien',
+        'nomor_antrean',
+        'status',
+      ];
+
     public function puskesmas(){
         return $this->belongsTo(puskesmas::class);
     }

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\pasien;
 use App\Models\puskesmas;
 use App\Models\poli;
+use App\Models\antrean;
+
 
 class PasienController extends Controller
 {
@@ -53,6 +55,13 @@ class PasienController extends Controller
         ]);
         
         $pasien = pasien::create($data);
+        $antrean = antrean::create([
+            'nomor_antrean' => 'A001',
+            'status' => 'menunggu',
+            'id_puskesmas' => $data['id_puskesmas'],
+            'id_poli' => $data['id_poli'],
+            'id_pasien' => $pasien->id_pasien,
+        ]);
 
         return redirect('/tiket');
     }
