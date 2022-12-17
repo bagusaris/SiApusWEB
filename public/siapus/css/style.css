@@ -1090,10 +1090,12 @@ section {
     margin-left: 60px;
 }
 
-.aboutPus .image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.aboutPus .image #gambar {
+    /* background-position: center center;
+    background-repeat: no-repeat; */
+    /* background-size: cover; */
+    width: 350px;
+    height: 200px;
     min-height: 200px;
     border-radius: 30px;
     margin-bottom: 50px;
@@ -1140,8 +1142,13 @@ section {
 }
 
 @media (max-width: 992px) {
-    .aboutPus .image {
-        margin-top: 50px;
+    .aboutPus .image #gambar {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        margin-right: 200px;
+        /* width: 300px;
+        height: 200px; */
+        margin-left: -34px;
     }
 
     .aboutPus .title-search {
@@ -1154,6 +1161,10 @@ section {
 
     .aboutPus .card {
         margin-bottom: 50px;
+    }
+
+    .aboutPus .input-group {
+        margin-top: 25px;
     }
 }
 

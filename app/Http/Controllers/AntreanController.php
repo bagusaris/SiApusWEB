@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\antrean;
 
 class AntreanController extends Controller
 {
@@ -14,6 +15,11 @@ class AntreanController extends Controller
     public function index()
     {
         //
+        $antrean = Antrean::with(['polis', 'puskesmas', 'pasiens'])->get();
+
+        // dd($antrean);
+
+        return view('siapus.antreansaya', compact('antrean'));
     }
 
     /**
