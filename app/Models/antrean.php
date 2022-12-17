@@ -20,13 +20,29 @@ class antrean extends Model
         'status',
       ];
 
-    public function puskesmas(){
-        return $this->belongsTo(puskesmas::class);
+    // public function puskesmas(){
+    //     return $this->belongsTo(puskesmas::class);
+    // }
+    // public function polis(){
+    //     return $this->belongsTo(poli::class);
+    // }
+    // public function pasiens(){
+    //     return $this->belongsTo(pasien::class);
+    // }
+
+    public function pasiens()
+    {
+        return $this->belongsTo(pasien::class, "id_pasien", "id_pasien");
     }
-    public function polis(){
-        return $this->belongsTo(poli::class);
+
+    public function polis()
+    {
+        return $this->belongsTo(poli::class, "id_poli", "id_poli");
     }
-    public function pasiens(){
-        return $this->belongsTo(pasien::class);
+
+    public function puskesmas()
+    {
+        return $this->belongsTo(puskesmas::class, "id_puskesmas", "id_puskesmas");
     }
+
 }

@@ -25,7 +25,7 @@
             <a class="nav-link scrollto" href="{{route('pasiens.create')}}">Pendaftaran Antrean</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="{{route('tiket')}}">Antrean Saya</a>
+            <a class="nav-link scrollto" href="{{route('tiket.index')}}">Antrean Saya</a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

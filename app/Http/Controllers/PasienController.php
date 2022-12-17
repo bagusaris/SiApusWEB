@@ -50,13 +50,13 @@ class PasienController extends Controller
     public function store(Request $request)
     {
         //
-        dd('ss');
+        // dd('ss');
         $data = $request->only(self::FETCHED_ATTRIBUTE);
         $validatedData=$request->validate([
             'nik' =>'required|unique:pasiens',
         ]);
         
-        $find_puskesmas=poli::where('id_puskesmas',$data['id_puskesmas'])->get();
+        $find_puskesmas=poli::where('id_puskesmas',$data['id_puskesmas'])->get();//poli sesuai puskesmas
        
         foreach ($find_puskesmas as $item_puskesmas) {
             if($data['id_poli']==$item_puskesmas->id_poli){

@@ -212,7 +212,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 order-2 order-lg-1 mx-5" data-aos="fade-right">
+                    <div class="col-lg-4 col-sm-12 order-2 order-lg-1 mx-5" data-aos="fade-right">
                     <h3 id="nama_puskesmas">Dinas Kesehatan Banyuwangi</h3>
                     <div class="image"  
                         data-aos="zoom-in">
