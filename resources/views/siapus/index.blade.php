@@ -14,7 +14,7 @@
                 <h2>Selamat Datang di <span>SI APUS</span></h2>
                 <p>SI APUS merupakan Sistem Antrean Puskesmas Banyuwangi</p>
                 <p>DENGAN SI APUS KE PUSKESMAS JADI MULUS</p>
-                <a href="{{route('daftar')}}" class="btn-get-started scrollto">Daftar Sekarang</a>
+                <a href="{{route('pasiens.create')}}" class="btn-get-started scrollto">Daftar Sekarang</a>
               </div>
             </div>
 
@@ -24,7 +24,7 @@
                 <h2>Selamat Datang di <span>SI APUS</span></h2>
                 <p>SI APUS merupakan Sistem Antrean Puskesmas Banyuwangi</p>
                 <p>DENGAN SI APUS KE PUSKESMAS JADI MULUS</p>
-                <a href="pendaftaranantrean.html" class="btn-get-started scrollto">Daftar Sekarang</a>
+                <a href="{{route('pasiens.create')}}" class="btn-get-started scrollto">Daftar Sekarang</a>
               </div>
             </div>
 
@@ -34,7 +34,7 @@
                 <h2>Selamat Datang di <span>SI APUS</span></h2>
                 <p>SI APUS merupakan Sistem Antrean Puskesmas Banyuwangi</p>
                 <p>DENGAN SI APUS KE PUSKESMAS JADI MULUS</p>
-                <a href="pendaftaranantrean.html" class="btn-get-started scrollto">Daftar Sekarang</a>
+                <a href="{{route('pasiens.create')}}" class="btn-get-started scrollto">Daftar Sekarang</a>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@
         </div>
       </section>
       <!-- ======= infoPus Section ======= -->
-      <section id="infoPus" class="infoPus">
+      {{-- <section id="infoPus" class="infoPus">
         <div class="container-fluid mt-5" data-aos="fade-up">
           <div class="section-title">
             <h2>Pencarian Puskesmas</h2>
@@ -101,11 +101,56 @@
           </div>
         </div>
         </div>
-      </section>
+      </section> --}}
+      <!-- End infoPus Us Section -->
+
+      <!-- ======= infoPus Section ======= -->
+      {{-- <section id="infoPus" class="infoPus">
+        <div class="container-fluid container-lg mt-5" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Pencarian Puskesmas</h2>
+          </div>
+          <div class="row g-5">
+            <div class="row d-flex">
+
+              <div class="col-md-6 col-sm-6 justify-content-start" style="margin-top:90px">
+
+                <div class="card">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-search"></i></i></span>
+                    </div>
+                    <div class="form-control">
+                      <!-- <label>Cari Nama Ibu Kota Provinsi:</label> -->
+                      <div>
+                        <select name="search-puskesmas" class="selectpicker form-control" data-live-search="true">
+                          <option>Cari Puskesmas</option>
+                          <option>Puskesmas Sobo</option>
+                          <option>Puskesmas Jajag</option>
+                          <option>Puskesmas Badean</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 mb-5 col-sm-6 order-first order-md-last d-flex align-items-center justify-content-center">
+                <div class="img">
+                  <img src="{{asset('siapus/img/informasipuskesmas/1.png') }}" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+      </section> --}}
       <!-- End infoPus Us Section -->
 
       <!-- ======= Puskesmas Terpilih Section ======= -->
-      <section id="aboutPus" class="aboutPus">
+      {{-- <section id="aboutPus" class="aboutPus">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Puskesmas Badean</h2>
@@ -135,7 +180,71 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> --}}
+
+      <section id="aboutPus" class="aboutPus">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Pencarian Puskesmas</h2>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="col-md-6 col-sm-6 justify-content-start">
+                    
+                        <div class="card">
+                         <img class="image-searchpus" src="{{asset('siapus/img/doctor-1.png') }}" alt="">
+                            <label for="exampleFormControlInput1" class="mb-2 title-search">Silahkan Pilih
+                                Puskesmas Yang Dituju</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-search"></i></i></span>
+                                </div>
+                                <div class="form-control">
+                                    <div>
+                                        <select name="id_puskesmas" id="id_puskesmas" class="selectpicker form-control"
+                                            data-live-search="true">
+                                            <option>Cari Puskesmas</option>
+                                          @foreach ($puskesmas as $pusk)
+                                                    <option value="{{ $pusk->id_puskesmas }}" > {{ $pusk->nama_puskesmas }} </option>
+                                                @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-2 order-lg-1 mx-5" data-aos="fade-right">
+                    <h3 id="nama_puskesmas">Dinas Kesehatan Banyuwangi</h3>
+                    <div class="image"  
+                        data-aos="zoom-in">
+                        <img id="gambar" src="{{ asset('siapus/img/dinkes.jpg') }}" >
+                    </div>
+                        <div class="icon-box mt-5 mt-lg-0">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Alamat</h4>
+                            <p id="alamat_puskesmas">
+                                 Jl. Letkol Istiqlah No.42, Singonegaran, Kec. Banyuwangi, Kab. Banyuwangi.
+                            </p>
+                        </div>
+                        <div class="icon-box mt-5">
+                            <i class="bi bi-telephone"></i>
+                            <h4>Nomor Telepon</h4>
+                            <p id="telp_puskesmas">(0333) 424794</p>
+                        </div>
+                        <div class="icon-box mt-5">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email</h4>
+                            <p id="email_puskesmas">dinkesbanyuwangi@yahoo.co.id</p>
+                        </div>
+                        <div class="icon-box mt-5">
+                            <i class="bi bi-clock"></i>
+                            <h4>Jam Kerja</h4>
+                            <p id="jam_kerja">Senin - Jumat : 08.00 - 15.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
       <!-- End Puskesmas Terpilih Section -->
 
       <!-- ======= Informasi Nomor Antrean Section ======= -->
@@ -156,12 +265,12 @@
                 </p>
                 <div
                   class="col-md-12 col-sm-6 order-first order-md-last d-flex align-items-center justify-content-center">
-                  <a href="{{route('daftar')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
+                  <a href="{{route('pasiens.create')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch mb-5">
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch mb-5" style="margin-left:50px; margin-right:50px">
               <div class="count-box">
                 <img class="imginfoantrean mx-auto" src="{{asset('siapus/img/poli/KIA.png') }}" alt="" />
                 <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
@@ -171,7 +280,7 @@
                 </p>
                 <div
                   class="col-md-12 col-sm-6 order-first order-md-last d-flex align-items-center justify-content-center">
-                  <a href="{{route('daftar')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
+                  <a href="{{route('pasiens.create')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
                 </div>
               </div>
             </div>
@@ -186,7 +295,7 @@
                 </p>
                 <div
                   class="col-md-12 col-sm-6 order-first order-md-last d-flex align-items-center justify-content-center">
-                  <a href="{{route('daftar')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
+                  <a href="{{route('pasiens.create')}}" class="btn btn-get-started scrollto">Daftar Sekarang</a>
                 </div>
               </div>
             </div>
@@ -198,6 +307,24 @@
   </main>
   <!-- End #main -->
 
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $( "select" ) .change(function () {    
+      var selPus = document.getElementById("id_puskesmas").value
+      $.get("/puskesmas/index", (res) => {
+        res.data.forEach((item, index) => {
+          if(selPus==item.id_puskesmas){
+            document.getElementById("gambar").src='/siapus/img/'+ item.foto_puskesmas;
+            document.getElementById("nama_puskesmas").innerHTML = item.nama_puskesmas;
+            document.getElementById("alamat_puskesmas").innerHTML = item.alamat_puskesmas;
+            document.getElementById("telp_puskesmas").innerHTML = item.telp_puskesmas;
+            document.getElementById("email_puskesmas").innerHTML = item.email_puskesmas;
+            document.getElementById("jam_kerja").innerHTML = item.jam_kerja;
+          }
+         })
+    });
+})
+  </script>
  
   @endsection
   

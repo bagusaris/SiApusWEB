@@ -45,7 +45,7 @@
             </table>
           </div>
           <div class="col-md-2 mb-5 col-sm-6 order-last order-md-last d-flex align-items-center justify-content-center">
-            <button class="btn btn-warning">Menunggu</button>
+            <button class="btn btn-warning">Menunggu Validasi</button>
           </div>
 
           <!-- </div> -->
@@ -100,6 +100,9 @@
                 <div class="col-12 d-flex align-items-center justify-content-center">
                   <h5 class="modal-title" id="exampleModalLabel">Antrean Saat Ini : A 019</h5>
                 </div>
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Antrean Selanjutnya : A 020</h5>
+                  </div>
                 </div>
             </div>
           </div>
@@ -140,7 +143,7 @@
             </table>
           </div>
           <div class="col-md-2 mb-5 col-sm-6 order-last order-md-last d-flex align-items-center justify-content-center">
-            <button class="btn btn-success">Selesai</button>
+            <button class="btn btn-success">Selesai Validasi</button>
           </div>
         </div>
         <!-- Modal 2-->
@@ -198,6 +201,9 @@
                 </div>
                 <div class="col-12 d-flex align-items-center justify-content-center">
                   <h5 class="modal-title" id="exampleModalLabel">Antrean Saat Ini : C 010</h5>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Antrean Selanjutnya : A 011</h5>
                 </div>
               </div>
             </div>
@@ -298,6 +304,9 @@
                 <div class="col-12 d-flex align-items-center justify-content-center">
                   <h5 class="modal-title" id="exampleModalLabel">Antrean Saat Ini : B 023</h5>
                 </div>
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Antrean Selanjutnya : B 024</h5>
+                  </div>
               </div>
             </div>
           </div>
